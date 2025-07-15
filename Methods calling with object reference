@@ -1,0 +1,30 @@
+public class SimpleMathOperations {
+    // Instance variables
+    int number1 = 20;
+    int number2 = 10;
+    
+    // Main method - entry point of the program
+    public static void main(String[] args) {
+        SimpleMathOperations math = new SimpleMathOperations();
+        
+        // Call methods to perform operations
+        math.addNumbers();
+        math.subtractNumbers();
+        math.multiplyNumbers();
+    }
+    
+    // Method to add two numbers
+    public void addNumbers() {
+        System.out.println("Addition: " + (number1 + number2));
+    }
+    
+    // Method to subtract two numbers
+    public void subtractNumbers() {
+        System.out.println("Subtraction: " + (number1 - number2));
+    }
+    
+    // Method to multiply two numbers
+    public void multiplyNumbers() {
+        System.out.println("Multiplication: " + (number1 * number2));
+    }
+}
