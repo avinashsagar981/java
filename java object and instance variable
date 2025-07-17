@@ -1,0 +1,44 @@
+
+// Main class to run the program
+public class Student {
+        // Instance variables - these store information about each student
+    String name;
+    int age;
+    String grade;
+    int marks;
+    
+    public static void main(String[] args) {
+        // Creating first student object
+        Student student1 = new Student();
+        Student student2 = new Student();
+        
+        // Setting values to instance variables using the object
+        student1.name = "Alice";
+        student1.age = 15;
+        student1.grade = "10th";
+        student1.marks = 45;
+        
+        // Creating second student object
+        student2.name = "Bob";
+        student2.age = 16;
+        student2.grade = "11th";
+        student2.marks = 65;
+        
+        // Using methods with first student
+        System.out.println("=== STUDENT 1 ===");
+        System.out.println(student1.name);
+        System.out.println(student1.age);
+        System.out.println(student1.grade);
+        System.out.println(student1.marks);
+        
+          // Using methods with first student
+        System.out.println("=== STUDENT 2 ===");
+        System.out.println(student2.name);
+        System.out.println(student2.age);
+        System.out.println(student2.grade);
+        System.out.println(student2.marks);
+       
+        
+  
+    }
+}
