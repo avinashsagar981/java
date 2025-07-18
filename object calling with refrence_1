@@ -1,0 +1,93 @@
+// This is a simple Java program demonstrating different variable types and basic object usage
+
+// Class definition
+public class SimpleExample {
+    
+    // Instance variable (belongs to each object)
+    int instanceCount = 0;
+    
+    // Static variable (shared by all objects of the class)
+    static int staticCount = 0;
+    
+    // Method with local variable
+    public void incrementCount() {
+        // Local variable (exists only within this method)
+        int localIncrement = 1;
+        
+        instanceCount += localIncrement;
+        staticCount += localIncrement;
+        
+        System.out.println("Instance count: " + instanceCount);
+        System.out.println("Static count: " + staticCount);
+        System.out.println("Local increment value: " + localIncrement);
+    }
+    
+    // Another method to display values
+    public void displayValues() {
+        System.out.println("\nCurrent Values:");
+        System.out.println("Instance variable: " + instanceCount);
+        System.out.println("Static variable: " + staticCount);
+        // Cannot access localIncrement here - it's local to incrementCount()
+    }
+    
+    // Main method - program entry point
+    public static void main(String[] args) {
+        // Create first object
+        SimpleExample obj1 = new SimpleExample();
+        
+        // Call methods using object reference
+        System.out.println("--- First Object ---");
+        obj1.incrementCount();
+        obj1.displayValues();
+        
+        // Create second object
+        SimpleExample obj2 = new SimpleExample();
+        
+        System.out.println("\n--- Second Object ---");
+        // Notice how staticCount is shared between objects
+        obj2.incrementCount();
+        obj2.incrementCount();
+        obj2.displayValues();
+        
+        // Show that obj1's instanceCount is separate from obj2's
+        System.out.println("\n--- First Object Again ---");
+        obj1.displayValues();
+    }
+}
+
+
+// comment section
+
+Explanation:
+
+    Instance Variable (instanceCount)
+
+        Belongs to each object individually
+
+        Each object gets its own copy
+
+        Accessed through object reference (e.g., obj1.instanceCount)
+
+    Static Variable (staticCount)
+
+        Shared by all objects of the class
+
+        Only one copy exists for the entire class
+
+        Can be accessed through class name or object reference
+
+    Local Variable (localIncrement)
+
+        Exists only within the method where it's declared
+
+        Cannot be accessed outside that method
+
+        Created when method is called and destroyed when method exits
+
+    Object Creation and Method Calling
+
+        new SimpleExample() creates a new object
+
+        Methods are called using object reference (e.g., obj1.incrementCount())
+
+When you run this program, you'll see how instance variables are unique to each object while static variables are shared, and how local variables only exist within their methods.
