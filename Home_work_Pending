@@ -1,0 +1,38 @@
+Create class tournament
+
+create instance variable  5-total
+name : abc (example)
+roll_no:
+age : --
+grade : b(example)
+sports : cricket(example)
+
+create main method - (3 three total Objects)
+create object with school name (gautam)
+create object with school name (Vani)
+create object with school name (progress)
+
+create method Vani_data();
+printstatement(obj_ref(vani) and call name(object))
+printstatement(obj_ref(vani) and call roll_no(object))
+printstatement(obj_ref(vani) and call age(object))
+printstatement(obj_ref(vani) and call grade(object))
+printstatement(obj_ref(vani) and call sports(object))
+
+create method gautam_data();
+printstatement(obj_ref(gautam) and call name(object))
+printstatement(obj_ref(gautam) and call roll_no(object))
+printstatement(obj_ref(gautam) and call age(object))
+printstatement(obj_ref(gautam) and call grade(object))
+printstatement(obj_ref(gautam) and call sports(object))
+
+create method progress_data();
+printstatement(obj_ref(progress) and call name(object))
+printstatement(obj_ref(progress) and call roll_no(object))
+printstatement(obj_ref(progress) and call age(object))
+printstatement(obj_ref(progress) and call grade(object))
+printstatement(obj_ref(progress) and call sports(object))
+
+
+
+what is missing in this code to execute ????
