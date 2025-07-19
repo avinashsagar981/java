@@ -1,0 +1,15 @@
+import java.util.Scanner;  // 1. Import the Scanner class
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);  // 2. Create Scanner object
+
+    System.out.println("Enter your name:");
+    String name = sc.nextLine();          // 3. Take String input
+
+    System.out.println("Enter your age:");
+    int age = sc.nextInt();               // 4. Take integer input
+
+    System.out.println("Hello " + name + ", you are " + age + " years old.");
+  }
+}
