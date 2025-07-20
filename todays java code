@@ -1,3 +1,71 @@
+
+import java.util.Scanner;
+
+public class SimpleApp {
+    // Instance variable (unique to each object)
+    String userName;
+    
+    // Static variable (shared by all objects)
+    static int userCount = 0;
+    
+    // Method 1: Set user details (uses instance variable)
+    public void setUserDetails(String name) {
+        userName = name;
+        userCount++;  // Increment static counter
+    }
+    
+    // Method 2: Print greeting (uses local variable)
+    public void printGreeting() {
+        // Local variable
+        String greeting = "Hello, ";
+        System.out.println(greeting + userName + "!");
+    }
+    
+    // Method 3: Show user count (uses static variable)
+    public void showUserCount() {
+        System.out.println("Total users: " + userCount);
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Create first object
+        SimpleApp user1 = new SimpleApp();
+        
+        System.out.println("Enter name for first user:");
+        String name1 = scanner.nextLine();
+        user1.setUserDetails(name1);
+        
+        System.out.println("Enter age for first user:");
+        int age1 = scanner.nextInt();
+        scanner.nextLine();  // Consume newline
+        
+        // Create second object
+        SimpleApp user2 = new SimpleApp();
+        
+        System.out.println("Enter name for second user:");
+        String name2 = scanner.nextLine();
+        user2.setUserDetails(name2);
+        
+        System.out.println("Enter age for second user:");
+        int age2 = scanner.nextInt();
+        
+        // Call methods using object references
+        System.out.println("\n--- User 1 ---");
+        user1.printGreeting();
+        System.out.println("Age: " + age1);
+        user1.showUserCount();
+        
+        System.out.println("\n--- User 2 ---");
+        user2.printGreeting();
+        System.out.println("Age: " + age2);
+        user2.showUserCount();
+        
+        scanner.close();
+    }
+}
+------------------------------------------------------------------------------------------------------------
+
 Key Features:
 
     Instance Variable: userName (unique to each user object)
