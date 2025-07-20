@@ -1,0 +1,150 @@
+// Original Student Program - Code Analysis
+// =====================================
+
+// Student class definition
+class Student {
+    // Instance variables - each object has its own copy
+    int rollno;      // Roll number of student
+    String name;     // Name of student
+    
+    // Method to insert/set student record
+    void insertRecord(int r, String n) {
+        rollno = r;  // Assigning parameter 'r' to instance variable 'rollno'
+        name = n;    // Assigning parameter 'n' to instance variable 'name'
+    }
+    
+    // Method to display student information
+    void displayInformation() {
+        System.out.println(rollno + " " + name);
+    }
+}
+
+// Test class to run the program
+class TestStudent4 {
+    public static void main(String args[]) {
+        // Creating two Student objects
+        Student s1 = new Student();  // First student object
+        Student s2 = new Student();  // Second student object
+        
+        // Setting data for first student
+        s1.insertRecord(111, "Karan");
+        
+        // Setting data for second student  
+        s2.insertRecord(222, "Aryan");
+        
+        // Displaying information of both students
+        s1.displayInformation();  // Output: 111 Karan
+        s2.displayInformation();  // Output: 222 Aryan
+    }
+}
+
+// Enhanced Version with Additional Features
+// ========================================
+
+class EnhancedStudent {
+    // Instance variables
+    int rollno;
+    String name;
+    String course;
+    double marks;
+    
+    // Static variable - shared by all students
+    static String collegeName = "ABC College";
+    static int totalStudents = 0;
+    
+    // Method to insert complete student record
+    void insertRecord(int r, String n, String c, double m) {
+        rollno = r;
+        name = n;
+        course = c;
+        marks = m;
+        totalStudents++;  // Increment total student count
+    }
+    
+    // Method to insert basic student record (method overloading)
+    void insertRecord(int r, String n) {
+        rollno = r;
+        name = n;
+        course = "Not Assigned";
+        marks = 0.0;
+        totalStudents++;
+    }
+    
+    // Method to display detailed student information
+    void displayInformation() {
+        System.out.println("Roll No: " + rollno);
+        System.out.println("Name: " + name);
+        System.out.println("Course: " + course);
+        System.out.println("Marks: " + marks);
+        System.out.println("College: " + collegeName);
+        System.out.println("------------------------");
+    }
+    
+    // Method to display brief information
+    void displayBrief() {
+        System.out.println(rollno + " " + name + " (" + course + ")");
+    }
+    
+    // Method to update marks
+    void updateMarks(double newMarks) {
+        double oldMarks = marks;  // Local variable to store old marks
+        marks = newMarks;
+        System.out.println("Marks updated from " + oldMarks + " to " + marks);
+    }
+    
+    // Method to check grade
+    void checkGrade() {
+        String grade;  // Local variable
+        
+        if (marks >= 90) {
+            grade = "A+";
+        } else if (marks >= 80) {
+            grade = "A";
+        } else if (marks >= 70) {
+            grade = "B";
+        } else if (marks >= 60) {
+            grade = "C";
+        } else {
+            grade = "F";
+        }
+        
+        System.out.println(name + " has grade: " + grade);
+    }
+    
+    // Static method to display college information
+    static void displayCollegeInfo() {
+        System.out.println("College: " + collegeName);
+        System.out.println("Total Students: " + totalStudents);
+        System.out.println("========================");
+    }
+}
+
+// Enhanced Test Class
+class EnhancedTestStudent {
+    public static void main(String args[]) {
+        System.out.println("=== Original Program Output ===");
+        
+        // Original program demonstration
+        Student s1 = new Student();
+        Student s2 = new Student();
+        s1.insertRecord(111, "Karan");
+        s2.insertRecord(222, "Aryan");
+        s1.displayInformation();
+        s2.displayInformation();
+        
+        System.out.println("\n=== Enhanced Program Output ===");
+        
+        // Enhanced program demonstration
+        EnhancedStudent student1 = new EnhancedStudent();
+        EnhancedStudent student2 = new EnhancedStudent();
+        EnhancedStudent student3 = new EnhancedStudent();
+        
+        // Insert complete records
+        student1.insertRecord(101, "Alice", "Computer Science", 85.5);
+        student2.insertRecord(102, "Bob", "Mathematics", 92.0);
+        
+        // Insert basic record (method overloading)
+        student3.insertRecord(103, "Charlie");
+        
+        // Display college information (static method)
+        EnhancedStudent.displayCollegeInfo();
