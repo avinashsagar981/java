@@ -1,0 +1,17 @@
+public class DataTypeExample {
+    public static void main(String[] args) {
+        // Variable declarations
+        int myNum = 5;               // Integer (whole number)
+        float myFloatNum = 5.99f;    // Floating point number
+        char myLetter = 'D';         // Character
+        boolean myBool = true;       // Boolean
+        String myText = "Hello";     // String
+
+        // Printing data types
+        System.out.println("Data type of myNum: " + int.class.getName());
+        System.out.println("Data type of myFloatNum: " + float.class.getName());
+        System.out.println("Data type of myLetter: " + char.class.getName());
+        System.out.println("Data type of myBool: " + boolean.class.getName());
+        System.out.println("Data type of myText: " + myText.getClass().getName());
+    }
+}
