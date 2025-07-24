@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class InputLengthExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter a number:");
+        int number = scanner.nextInt(); // Reading input as int
+        
+        // Finding length directly
+        int length = String.valueOf(Math.abs(number)).length();
+        
+        System.out.println("Length of input = " + length);
+        System.out.println("Data type of length: " + Integer.class.getName());
+        
+        scanner.close();
+    }
+}
