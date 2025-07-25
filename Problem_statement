@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class LoopTask {
+    // Instance variable
+    int instanceVar = 10;
+
+    // Static variable
+    static int staticVar = 20;
+
+    // Method to take input from user
+    public int[] takeInput() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int num1 = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int num2 = sc.nextInt();
+        return new int[]{num1, num2};
+    }
+
+    // Method to perform calculations
+    public void performTask(int num1, int num2) {
+        // Local variable
+        int sum = num1 + num2;
+        System.out.println("Sum (local variable): " + sum);
+
+        // If-else statement to check even or odd
+        if (num1 % 2 == 0) {
+            System.out.println(num1 + " is even.");
+        } else {
+            System.out.println(num1 + " is odd.");
+        }
+
+        // For loop
+        System.out.println("Printing numbers from 1 to " + num1);
+        for (int i = 1; i <= num1; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        // Nested loop - multiplication table up to 5 rows
+        System.out.println("Multiplication table of " + num2);
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= num2; j++) {
+                System.out.print((i * j) + "\t");
+            }
+            System.out.println();
+        }
+
+        // Using instance and static variable
+        System.out.println("Instance variable value: " + instanceVar);
+        System.out.println("Static variable value: " + staticVar);
+    }
+
+    public static void main(String[] args) {
+        LoopTask obj = new LoopTask();
+        int[] inputs = obj.takeInput();
+        obj.performTask(inputs[0], inputs[1]);
+    }
+}
