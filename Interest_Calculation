@@ -1,0 +1,29 @@
+// Class to calculate Simple Interest
+public class SimpleInterestCalculator {
+
+    // Method to calculate and print simple interest
+    void calculateInterest() {
+        // Local variables for principal, time, and rate
+        int principal = 1000;  // P
+        int time = 2;          // T in years
+        int rate = 5;          // R in percent
+
+        // Calculate simple interest using formula (P * T * R) / 100
+        float interest = (principal * time * rate) / 100f;
+
+        // Print the result
+        System.out.println("Principal: " + principal);
+        System.out.println("Time: " + time + " years");
+        System.out.println("Rate: " + rate + "%");
+        System.out.println("Simple Interest: " + interest);
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        // Create object of class
+        SimpleInterestCalculator obj = new SimpleInterestCalculator();
+        
+        // Call method to calculate interest
+        obj.calculateInterest();
+    }
+}
