@@ -1,0 +1,61 @@
+🧪 Example Program: Compare for vs while
+
+# Print numbers from 1 to 5 using both for and while loops. Then, keep asking the user to enter a number until they enter a positive number.
+
+import java.util.Scanner;
+
+public class LoopComparison {
+    public static void main(String[] args) {
+
+        // 1️⃣ Using FOR loop when number of iterations is known
+        System.out.println("Using for loop to print numbers 1 to 5:");
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Number: " + i);
+        }
+
+        // 2️⃣ Using WHILE loop when the condition is uncertain
+        Scanner scanner = new Scanner(System.in);
+        int number;
+
+        System.out.println("\nEnter a positive number:");
+        number = scanner.nextInt();
+
+        while (number <= 0) {
+            System.out.println("You entered " + number + ". Please enter a positive number:");
+            number = scanner.nextInt();
+        }
+
+        System.out.println("Thank you! You entered a positive number: " + number);
+        scanner.close();
+    }
+}
+
+
+
+================================== 🧠 Explanation ====================================================================
+
+=======================================================================================================================
+
+
+🟩 Part 1 – for loop:
+
+    We know we want to print numbers from 1 to 5 (5 times).
+
+    Perfect case for for loop.
+
+🟦 Part 2 – while loop:
+
+    We don’t know how many times the user might enter wrong input.
+
+    So, we keep asking until they give a positive number.
+
+    Perfect use case for while loop.
+
+=======================================================================================================================
+=======================================================================================================================
+
+
+| Use `for` loop when...                                                      | Use `while` loop when...                                                     |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| You **know in advance** how many times to loop (fixed number of iterations) | You **don’t know** how many times to loop (loop until some condition is met) |
+| Loop counter is used                                                        | Waiting for a condition, user input, or unknown event                        |
