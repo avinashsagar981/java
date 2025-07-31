@@ -1,0 +1,100 @@
+public class WhileLoopExample {
+
+    public static void main(String[] args) {
+
+        // 1. We start with 0 apples. This is our "counter" variable.
+        int numberOfApples = 0;
+
+        // 2. This is the WHILE loop!
+        //    It says: "WHILE the 'numberOfApples' is LESS THAN 5, keep doing what's inside the curly braces."
+        while (numberOfApples < 5) {
+            System.out.println("You have " + numberOfApples + " apples.");
+
+            // 3. IMPORTANT: We add 1 to the number of apples in each loop.
+            //    If we didn't do this, the loop would run forever!
+            numberOfApples = numberOfApples + 1; // Or you can write: numberOfApples++;
+        }
+
+        // 4. Once the loop finishes (because numberOfApples is no longer less than 5),
+        //    this line will be printed.
+        System.out.println("Great! You now have " + numberOfApples + " apples. That's enough!");
+    }
+}
+
+========================================= 🧠 Explanation 🧠 ==============================================================
+===========================================================================================================================
+===========================================================================================================================
+
+Let's Trace What Happens Step-by-Step:
+
+    int numberOfApples = 0;
+
+        numberOfApples is 0.
+
+    while (numberOfApples < 5)
+
+        Is 0 < 5? YES, it's true! So, the code inside the loop runs.
+
+        Inside the loop (1st time):
+
+            System.out.println("You have 0 apples."); (Prints: "You have 0 apples.")
+
+            numberOfApples = 0 + 1; (Now numberOfApples is 1.)
+
+    Go back to while (numberOfApples < 5)
+
+        Is 1 < 5? YES, it's true! So, the code inside the loop runs again.
+
+        Inside the loop (2nd time):
+
+            System.out.println("You have 1 apples."); (Prints: "You have 1 apples.")
+
+            numberOfApples = 1 + 1; (Now numberOfApples is 2.)
+
+    Go back to while (numberOfApples < 5)
+
+        Is 2 < 5? YES, it's true! So, the code inside the loop runs again.
+
+        Inside the loop (3rd time):
+
+            System.out.println("You have 2 apples."); (Prints: "You have 2 apples.")
+
+            numberOfApples = 2 + 1; (Now numberOfApples is 3.)
+
+    Go back to while (numberOfApples < 5)
+
+        Is 3 < 5? YES, it's true! So, the code inside the loop runs again.
+
+        Inside the loop (4th time):
+
+            System.out.println("You have 3 apples."); (Prints: "You have 3 apples.")
+
+            numberOfApples = 3 + 1; (Now numberOfApples is 4.)
+
+    Go back to while (numberOfApples < 5)
+
+        Is 4 < 5? YES, it's true! So, the code inside the loop runs again.
+
+        Inside the loop (5th time):
+
+            System.out.println("You have 4 apples."); (Prints: "You have 4 apples.")
+
+            numberOfApples = 4 + 1; (Now numberOfApples is 5.)
+
+    Go back to while (numberOfApples < 5)
+
+        Is 5 < 5? NO, it's FALSE! (5 is not less than 5, it's equal).
+
+        Since the condition is now false, the loop stops.
+
+    System.out.println("Great! You now have 5 apples. That's enough!"); (This line is printed after the loop finishes.)
+
+Key Takeaways for Beginners:
+
+    while (condition): The code inside the curly braces {} will keep running as long as the condition inside the parentheses () is true.
+
+    The Condition is Checked Before Each Run: Java checks the condition every single time before it runs the code inside the loop.
+
+    Something Must Change: Inside the loop, you must have code that eventually makes the condition false. If you don't, the loop will run forever (this is called an "infinite loop" and is usually a mistake!). In our example, numberOfApples = numberOfApples + 1; is what makes the condition eventually false.
+
+    ++ (Increment Operator): A common shortcut for variable = variable + 1; is variable++;. So numberOfApples++; is the same as numberOfApples = numberOfApples + 1;.
