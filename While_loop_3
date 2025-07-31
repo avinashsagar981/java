@@ -1,0 +1,12 @@
+✅ Print numbers in reverse (from 5 to 1):
+
+public class ReverseCount {
+    public static void main(String[] args) {
+        int i = 5;
+
+        while (i >= 1) {
+            System.out.println("Counting down: " + i);
+            i = i - 1;
+        }
+    }
+}
