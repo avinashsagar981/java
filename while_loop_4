@@ -1,0 +1,16 @@
+✅  Calculate the sum of numbers from 1 to 5
+
+
+public class SumExample {
+    public static void main(String[] args) {
+        int i = 1;
+        int sum = 0;
+
+        while (i <= 5) {
+            sum = sum + i;
+            i = i + 1;
+        }
+
+        System.out.println("Total Sum = " + sum);
+    }
+}
