@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class StarPattern {
+    public static void main(String[] args) {
+        // Create scanner for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask for user input
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        // Print descending star pattern
+        for (int i = num; i > 0; i--) {          // Outer loop: number of rows
+            for (int j = 0; j < i; j++) {        // Inner loop: stars per row
+                System.out.print("*");
+            }
+            System.out.println();                // Newline after each row
+        }
+
+        scanner.close();
+    }
+}
